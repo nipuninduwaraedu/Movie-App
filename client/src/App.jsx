@@ -3,9 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import MovieCard from './components/MovieCard'
 
 function App() {
-  const [movie, setMovie] = useState([])
+  const [movies, setMovies] = useState([])
 
   const [loading, setLoading] = useState(true)
 
@@ -15,7 +16,7 @@ function App() {
         "https://api.tvmaze.com/shows"
       );
 
-      setMovie(response.data.slice(0,20));
+      setMovies(response.data.slice(0,20));
       setLoading(false);
       
     } catch (error) {
@@ -38,6 +39,13 @@ function App() {
   return (
     <div className="container">
       <h1 className='title'>Movie Explorer</h1>
+
+      {movies.map((movie)=>{
+        <MovieCard>
+          key={movie.id}
+          movie={movie}
+        </MovieCard>
+      })}
      
     </div>
      
