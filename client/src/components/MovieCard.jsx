@@ -1,4 +1,6 @@
 import React from "react";
+import "../Styles/card.css"
+import "../App.css"
 
 function MovieCard({ movie }) {
   return (
