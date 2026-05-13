@@ -24,11 +24,11 @@ function App() {
     fetchMovie();
   }, []);
 
-  const filterMovie = movies.filter((movie)=>{
+  const filterMovie = movies.filter((movie)=>
     movie.name 
           .toLowerCase()
           .includes(search.toLocaleLowerCase())
-  })
+  );
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -38,7 +38,6 @@ function App() {
     <div className="container">
       <Navbar search={search} setSearch={setSearch} />
 
-      <h1 className="title">Movie Explorer</h1>
       <div className="movie-grid">
         {filterMovie.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
