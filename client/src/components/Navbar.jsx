@@ -1,4 +1,5 @@
 import React from 'react'
+import "../Styles/navbar.css"
 
 function Navbar({search, setSearch}) {
   return (

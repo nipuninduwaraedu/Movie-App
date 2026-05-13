@@ -1,23 +1,38 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px;
-    gap: 20px;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px;
+  margin-bottom: 35px;
+  background: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .logo {
-    font-size: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff4d4d;
+  letter-spacing: 1px;
 }
 
 .search {
-    padding: 12px;
-    width: 300px;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: white;
-    color: white;
+  width: 320px;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  outline: none;
+  border-radius: 10px;
+  background: #2b2b2b;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.search::placeholder {
+  color: #bdbdbd;
+}
+
+.search:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
 }
