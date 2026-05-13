@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Navbar() {
+function Navbar({search, setSearch}) {
   return (
    <nav className='navbar'>
     <h1 className='logo'>Movie App</h1>
